@@ -75,8 +75,8 @@ done
 
 # Default values
 case "${ARCH}" in
-    "arm") TARGET="arm-linux-gnueabi" ;;
-    "arm64") TARGET="aarch64-linux-gnu" ;;
+    "arm") TARGET="arm-linux-androideabi" ;;
+    "arm64") TARGET="aarch64-linux-android" ;;
     "i686") TARGET="i686-linux-gnu" ;;
     "x86_64") TARGET="x86_64-linux-gnu" ;;
     *) report_error "Absent or invalid arch specified!" -h ;;
