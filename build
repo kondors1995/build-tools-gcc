@@ -343,7 +343,7 @@ function download_sources() {
 
         if [[ ! -f linux-${LINUX}.tar.gz ]]; then
             header "DOWNLOADING LINUX KERNEL"
-            wget https://cdn.kernel.org/pub/linux/kernel/v4.x/linux-${LINUX}.tar.xz
+            wget https://git.kernel.org/torvalds/t/linux-${LINUX}.tar.gz
         fi
     fi
 
@@ -369,7 +369,7 @@ function extract_sources() {
     if [[ ${TARBALLS} ]]; then
         extract binutils-${BINUTILS}.tar.xz ../binutils
         extract ${GCC_TAR} ../gcc
-        extract linux-${LINUX}.tar.xz ../linux
+        extract linux-${LINUX}.tar.gz ../linux
     fi
 }
 
