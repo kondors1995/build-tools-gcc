@@ -324,7 +324,7 @@ function download_sources() {
     else
         if [[ ! -f binutils-${BINUTILS}.tar.xz ]]; then
             header "DOWNLOADING BINUTILS"
-            wget http://ftp.gnu.org/gnu/binutils/binutils-${BINUTILS}.tar.xz
+            wget https://ftp.gnu.org/gnu/binutils/binutils-${BINUTILS}.tar.xz
         fi
 
         if [[ ${SOURCE} == "gnu" ]]; then
