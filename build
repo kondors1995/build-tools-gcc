@@ -328,11 +328,11 @@ function download_sources() {
         fi
 
         if [[ ${SOURCE} == "gnu" ]]; then
-            if [[ ! -f ${GCC}.tar.${EXT:-xz} ]]; then
+            if [[ ! -f ${GCC}.tar.xz ]]; then
                 header "DOWNLOADING GCC"
-                wget https://mirrors.kernel.org/gnu/gcc/${GCC}/${GCC}.tar.${EXT:-gz}
+                wget https://mirrors.kernel.org/gnu/gcc/${GCC}/${GCC}.tar.xz
             fi
-            GCC_TAR=${GCC}.tar.${EXT:-gz}
+            GCC_TAR=${GCC}.tar.xz
         else
             if [[ ! -f gcc-${GCC}.tar.gz ]]; then
                 header "DOWNLOADING GCC"
