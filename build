@@ -377,17 +377,17 @@ function extract_sources() {
 
 # Update git repos
 function update_repos() {
+    if [[ ! ${UPDATE} && ${VERSION} -ge 6 && ${TARBALLS} ]]; then
+        cd isl
+        git remote update
+        git checkout ${ISL}
+        git reset --hard origin/${ISL}
+        ./autogen.sh
+        cd ..
+    fi
+
     if [[ ! ${UPDATE} && ! ${TARBALLS} ]]; then
         header "UPDATING SOURCES"
-
-        if [[ ${VERSION} -ge 6 && ${TARBALLS} ]]; then
-            cd isl
-            git remote update
-            git checkout ${ISL}
-            git reset --hard origin/${ISL}
-            ./autogen.sh
-            cd ..
-        fi
 
         cd binutils
         git remote update
