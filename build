@@ -205,7 +205,7 @@ function parse_parameters() {
                         ISL="isl-0.17.1" ;;
             "linaro:6") GCC=linaro-local/gcc-6-integration-branch ;;
             "linaro:7") GCC=linaro-local/gcc-7-integration-branch ;;
-            "linaro:8") GCC=linaro-local/gcc-8-branch ;;
+            "linaro:8") GCC=gcc-8-branch ;;
             "linaro:9") report_error "There's no such thing as Linaro 9.x Clannad..." -h ;;
             *) report_error "Absent or invalid GCC version or source specified!" -h ;;
         esac
